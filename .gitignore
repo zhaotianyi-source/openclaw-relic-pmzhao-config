@@ -14,6 +14,10 @@ agents/*/sessions/
 # cron run logs
 cron/runs/
 
+# git credentials (sensitive)
+.git-credentials
+.gitconfig
+
 # backups & runtime state
 *.bak
 *.bak.*

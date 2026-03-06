@@ -58,6 +58,7 @@
     "feishu": {
       "enabled": true,
       "topicSessionMode": "enabled",
+      "allowFrom": ["ou_0b0c4e9316a716c35ba1e5fc0033fe2d"],
       "accounts": {
         "main": {
           "appId": "cli_a914192bd6f9dcc9",

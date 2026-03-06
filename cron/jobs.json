@@ -64,6 +64,36 @@
       },
       "updatedAtMs": 1772748032280,
       "wakeMode": "now"
+    },
+    {
+      "id": "sync-workspace",
+      "name": "同步 workspace 仓库",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 * * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agentTurn",
+        "message": "定时同步任务：在 workspace 根目录（即你的工作目录）执行 git pull --ff-only origin main，拉取天一从家里推送的最新改动。如果有更新，简要列出变更的文件；如果 Already up to date 则不需要通知。注意：不要 git push，只拉取。"
+      },
+      "sessionTarget": "isolated",
+      "enabled": true,
+      "state": {
+        "nextRunAtMs": 1772800200000,
+        "lastRunAtMs": 1772798400041,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 30938,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "delivery": {
+        "mode": "announce"
+      },
+      "updatedAtMs": 1772798430979
     }
   ]
 }
