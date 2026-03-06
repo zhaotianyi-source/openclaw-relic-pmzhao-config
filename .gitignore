@@ -1,0 +1,21 @@
+# runtime data
+logs/
+media/
+delivery-queue/
+feishu/
+memory/
+canvas/
+devices/
+credentials/
+
+# session transcripts (runtime, can be huge)
+agents/*/sessions/
+
+# cron run logs
+cron/runs/
+
+# backups & runtime state
+*.bak
+*.bak.*
+update-check.json
+exec-approvals.json

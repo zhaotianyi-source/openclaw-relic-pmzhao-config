@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "daily-ai-news",
+      "name": "每日 AI 新闻日报",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agentTurn",
+        "message": "现在是每日 AI 日报的定时任务。请按照 HEARTBEAT.md 和 TOOLS.md 中的规则执行：1) 搜索过去一个自然日的 AI 重要新闻；2) 按规则整理 10 篇（5 条国内 + 5 条国际，TapTap 制造相关加权、每条带原文超链、选一篇最佳推荐）；3) 写入 projects/每日AI新闻日报/YYYY-MM-DD-AI日报.md；4) 将日报内容直接发送给天一。署名：Relic-产品小赵。"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "ou_0b0c4e9316a716c35ba1e5fc0033fe2d"
+      },
+      "enabled": true,
+      "state": {
+        "nextRunAtMs": 1772845200000,
+        "lastRunAtMs": 1772758800029,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 326321,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 2,
+        "lastError": "cron announce delivery failed"
+      },
+      "updatedAtMs": 1772759126350,
+      "wakeMode": "now"
+    },
+    {
+      "id": "sync-product-document",
+      "name": "同步 product-document 仓库",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "payload": {
+        "kind": "agentTurn",
+        "message": "定时同步任务：请进入 projects/product-document/ 目录，执行 git pull origin main，拉取最新的文档。如果拉取成功，简要告诉我更新了哪些文件；如果没有更新则不需要通知。"
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "ou_0b0c4e9316a716c35ba1e5fc0033fe2d"
+      },
+      "enabled": true,
+      "state": {
+        "nextRunAtMs": 1772834400000,
+        "lastRunAtMs": 1772748000032,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 32248,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron announce delivery failed"
+      },
+      "updatedAtMs": 1772748032280,
+      "wakeMode": "now"
+    }
+  ]
+}

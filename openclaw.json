@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.25",
+    "lastTouchedAt": "2026-03-02T02:53:30.773Z"
+  },
+  "models": {
+    "providers": {
+      "bailian": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "${QWEN_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-5",
+            "name": "GLM-5"
+          },
+          {
+            "id": "glm-4.7",
+            "name": "GLM-4.7"
+          },
+          {
+            "id": "qwen3.5-plus",
+            "name": "Qwen3.5 Plus"
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen3 Coder Plus"
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5"
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "bailian/glm-5"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "topicSessionMode": "enabled",
+      "accounts": {
+        "main": {
+          "appId": "cli_a914192bd6f9dcc9",
+          "appSecret": "259g7R0ndI3XRLvals2eGouqkFBXyBk0"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://127.0.0.1:18789",
+        "http://localhost:18789"
+      ]
+    },
+    "auth": {
+      "token": "oc-sandbox-token-a8f3e2d1b9c7465890fe1234abcd5678"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      },
+      "openclaw-wecom": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "openclaw-wecom": {
+        "source": "npm",
+        "spec": "@creatoraris/openclaw-wecom",
+        "installPath": "/home/node/.openclaw/extensions/openclaw-wecom",
+        "version": "0.4.3",
+        "resolvedName": "@creatoraris/openclaw-wecom",
+        "resolvedVersion": "0.4.3",
+        "resolvedSpec": "@creatoraris/openclaw-wecom@0.4.3",
+        "integrity": "sha512-2k9ZKx2MovEa86YtfFGsHjbJsCz7WkZyOjUZdP9Kr+8lqxYF2sMdiNUR4rnQRwQO44wcyjRcQsL2R4gcF7n21Q==",
+        "shasum": "7d778461de755adf829d3d0538ef13e8f633f065",
+        "resolvedAt": "2026-03-02T02:53:30.357Z",
+        "installedAt": "2026-03-02T02:53:30.435Z"
+      }
+    }
+  }
+}

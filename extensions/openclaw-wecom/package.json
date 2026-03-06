@@ -1,0 +1,45 @@
+{
+  "name": "@creatoraris/openclaw-wecom",
+  "version": "0.4.3",
+  "description": "Enterprise WeChat (WeCom) channel plugin for OpenClaw",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "openclaw",
+    "wecom",
+    "wechat",
+    "enterprise-wechat",
+    "chatbot",
+    "plugin",
+    "ai"
+  ],
+  "author": "CreatorAris <arisyingying13@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreatorAris/openclaw-wecom-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CreatorAris/openclaw-wecom-plugin/issues"
+  },
+  "homepage": "https://github.com/CreatorAris/openclaw-wecom-plugin#readme",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  },
+  "files": [
+    "index.js",
+    "crypto.js",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ]
+}
