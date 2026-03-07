@@ -48,6 +48,10 @@
       }
     }
   },
+  "env": {
+    "BOCHA_API_KEY": "sk-8ede8f752a4f4f40bdfc259ee8cb0132",
+    "SERPER_API_KEY": "448aefb504e6dc376af6c33ae5c33aa69247639f"
+  },
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
